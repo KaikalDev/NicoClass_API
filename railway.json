@@ -4,6 +4,6 @@
         "builder": "RAILPACK"
     },
     "deploy": {
-        "startCommand": "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn mysite.wsgi"
+        "startCommand": "pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn apiSetup.wsgi --bind 0.0.0.0:8080"
     }
 }
