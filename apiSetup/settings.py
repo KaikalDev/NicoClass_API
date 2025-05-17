@@ -67,7 +67,7 @@ WSGI_APPLICATION = 'apiSetup.wsgi.application'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "" #front Deploy
+    "https://nicoclassapi-production.up.railway.app/" #front Deploy
 ]
 
 CORS_ALLOW_CREDENTIALS = True
