@@ -51,8 +51,8 @@ def gerar_prompt(data):
     # OBJETIVO
     prompt.append("\n🎯 Objetivo:")
     prompt.append("Gerar uma tabela com os horários de cada disciplina para cada turma, atribuindo o professor certo, em horários permitidos.")
-    prompt.append("Se houver inconsistências ou impossibilidades, explique claramente o problema e proponha soluções viáveis sepanndo em erros.")
-    prompt.append("Se alguma regra optativa ou exigência forem descumpridas, explique claramente o problema sepanndo em avisos.")
+    prompt.append("Se houver inconsistências ou impossibilidades, explique claramente o problema e proponha soluções viáveis e expecifique onde foi o problema(Turma dia e horario), separando em erros.")
+    prompt.append("Se alguma regra optativa ou exigência forem descumpridas, explique claramente o problema e expecifique onde foi o problema(Turma dia e horario), separando em avisos.")
 
     # FORMATO DE RESPOSTA
     prompt.append("\n⚠️ IMPORTANTE:")
@@ -62,18 +62,28 @@ def gerar_prompt(data):
 
     prompt.append("""
         {
-        "TURMA_ID": {
-            "segunda": [
-            { "horario": "08", "disciplina": "MAT1", "professor": "P1" },
-            { "horario": "09", "disciplina": "POR1", "professor": "P2" }
+            "turmas": [
+                {
+                    nome: "ID_TURMA"
+                    dias: [
+                        {
+                            dia: "segunda"
+                            "horario": "08", 
+                            "disciplina": "MAT1", 
+                            "professor": "P1"
+                        },
+                        {
+                            dia: "segunda"
+                            "horario": "09", 
+                            "disciplina": "POR1", 
+                            "professor": "P2"
+                        }
+                        // e assim por diante...
+                    ]
+                }
             ],
-            "terca": [
-            { "horario": "08", "disciplina": "HIS1", "professor": "P3" }
-            ]
-            // e assim por diante...
             "erros": [ "" ],
             "avisos": [ "" ]
-        }
         }
     """)
 
