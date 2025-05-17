@@ -68,15 +68,15 @@ def gerar_prompt(data):
                     dias: [
                         {
                             dia: "segunda"
-                            "horario": "08", 
-                            "disciplina": "MAT1", 
-                            "professor": "P1"
+                            horario: "08", 
+                            disciplina: "MAT1", 
+                            professor: "P1"
                         },
                         {
                             dia: "segunda"
-                            "horario": "09", 
-                            "disciplina": "POR1", 
-                            "professor": "P2"
+                            horario: "09", 
+                            disciplina: "POR1", 
+                            professor: "P2"
                         }
                         // e assim por diante...
                     ]
