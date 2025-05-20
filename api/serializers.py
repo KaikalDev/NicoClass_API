@@ -45,9 +45,4 @@ class HorarioSerializer(serializers.Serializer):
     class Meta:
         fields = "__all__"
 
-class HorarioGeralSerializer(serializers.Serializer):
-    horario = HorarioSerializer()
-
-    class Meta:
-        fields = ["horario"]
 

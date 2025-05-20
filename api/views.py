@@ -3,15 +3,17 @@ from .geradorPrompt import gerar_prompt
 from .geminiService import enviar_prompt
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import HorarioGeralSerializer
+from .serializers import HorarioSerializer
 import json
 @api_view(["POST"])
 def enviarHorario(request):
     if request.method == "POST":
-        dadosJsonMock = HorarioGeralSerializer(data=request.data)
+        dadosJsonMock = HorarioSerializer(data=request.data)
         if dadosJsonMock.is_valid():
 
-            dados = dadosJsonMock.validated_data.get("horario")
+            dados = dadosJsonMock.validated_data
+
+            print(dados)
 
             prompt = gerar_prompt(dados)
 
@@ -29,6 +31,8 @@ def enviarHorario(request):
             if texto.endswith("```"):
                 texto = texto[:-3].strip()
 
+            print(texto)
+
             try:
                 resJson = json.loads(texto)
                 print(resJson)
@@ -36,7 +40,7 @@ def enviarHorario(request):
             except json.JSONDecodeError:
                 return Response({"respostaJson": "Deu erro boy"})
 
-            return Response({"respostaJson": resJson}, status=status.HTTP_200_OK)
+            return Response({"respostaJson": dados}, status=status.HTTP_200_OK) #trocar para resJson, dados era para teste da api
         else:
             print("deu errado")
             return Response(dadosJsonMock.errors, status=status.HTTP_400_BAD_REQUEST)
