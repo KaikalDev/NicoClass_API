@@ -20,7 +20,7 @@ def gerar_prompt(data):
         prompt.append(f"\nTurma {nome_turma} ({turno}) - Dias: {dias_de_aula} - Horários: {', '.join(horarios)}")
         prompt.append("Disciplinas e Aulas Semanais:")
 
-        for disciplina in turma.get("disclinas", []):
+        for disciplina in turma.get("disciplina", []):
             nome_disc = disciplina["nome"]
             aulas_semana = disciplina["aulas_por_semana"]
             prof = disciplina["professor"]

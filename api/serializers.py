@@ -12,7 +12,7 @@ class DisciplinaComProfessorSerializer(serializers.Serializer):
 
 class TurmaEntradaSerializer(serializers.Serializer):
     nome = serializers.CharField()
-    disclinas = serializers.ListField(child=DisciplinaComProfessorSerializer())
+    disciplinas = serializers.ListField(child=DisciplinaComProfessorSerializer())
     dias_de_aula = serializers.ListField(child=serializers.CharField())
     turno = serializers.CharField()
     horarios = serializers.ListField(child=serializers.CharField())
