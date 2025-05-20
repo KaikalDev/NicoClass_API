@@ -13,11 +13,7 @@ def enviarHorario(request):
 
             dados = dadosJsonMock.validated_data
 
-            print(dados)
-
             prompt = gerar_prompt(dados)
-
-            
 
             res = enviar_prompt(prompt)
 
@@ -35,12 +31,11 @@ def enviarHorario(request):
 
             try:
                 resJson = json.loads(texto)
-                print(resJson)
 
             except json.JSONDecodeError:
                 return Response({"respostaJson": "Deu erro boy"})
 
-            return Response({"respostaJson": dados}, status=status.HTTP_200_OK) #trocar para resJson, dados era para teste da api
+            return Response({"respostaJson": resJson}, status=status.HTTP_200_OK)
         else:
             print("deu errado")
             return Response(dadosJsonMock.errors, status=status.HTTP_400_BAD_REQUEST)
