@@ -85,7 +85,7 @@ def gerar_prompt(data):
                             "dia": "segunda",
                             "horario": "08",
                             "disciplina": "MAT1",
-                            "professor": "P1"
+                            "professor": "nome do professor"
                         }
                         ...
                     ]
