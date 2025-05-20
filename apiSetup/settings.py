@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-&aoic#6j@qmka&vg$+9jh%kz1bw&sl+j^3!hahidk!b-(&ulbc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["nicoclassapi-production.up.railway.app"] 
+ALLOWED_HOSTS = ["nicoclassapi-production.up.railway.app", '127.0.0.1'] 
 
 
 # Application definition
