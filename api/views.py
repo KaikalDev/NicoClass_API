@@ -33,7 +33,7 @@ def enviarHorario(request):
                 resJson = json.loads(texto)
 
             except json.JSONDecodeError:
-                return Response({"respostaJson": "Deu erro boy"})
+                return Response({"respostaJson": "Deu erro boy"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
             return Response({"respostaJson": resJson}, status=status.HTTP_200_OK)
         else:
