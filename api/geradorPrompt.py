@@ -67,12 +67,13 @@ def gerar_prompt(data):
     prompt.append("Gerar uma tabela com os horários de cada disciplina para cada turma, atribuindo o professor certo, em horários permitidos.")
     prompt.append("Se houver inconsistências ou impossibilidades, explique claramente o problema e especifique onde foi o problema (Turma, dia e horário), separando em erros.")
     prompt.append("Se alguma regra optativa ou exigência forem descumpridas, explique claramente o problema e especifique onde foi o problema (Turma, dia e horário), separando em avisos.")
-
+    prompt.append("Se houver inconsistências ou impossibilidades, explique claramente o problema e especifique onde foi o problema (Turma, dia e horário), separando em erros.")
+    prompt.append("Se alguma regra optativa ou exigência forem descumpridas, explique claramente o problema e especifique onde foi o problema (Turma, dia e horário), separando em avisos.")
     # FORMATO DE RESPOSTA
     prompt.append("\n⚠️ IMPORTANTE:")
     prompt.append("As próximas interações serão apenas para **ajustes nas tabelas**.")
     prompt.append("Responda **somente com as tabelas alteradas**, evitando conflitos de horário entre professores ou turmas.")
-    prompt.append("A resposta deve estar no seguinte formato JSON:")
+    prompt.append("A resposta deve ser apenas no seguinte formato JSON:")
 
     prompt.append("""
         {
