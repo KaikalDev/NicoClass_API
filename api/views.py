@@ -17,7 +17,6 @@ def enviarHorario(request):
 
             res = enviar_prompt(prompt)
 
-            print(prompt)
 
             if isinstance(res, Exception):
                 return Response({"error": f"Erro ao enviar mensagem para o Gemini: {str(res)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
