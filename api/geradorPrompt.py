@@ -1,5 +1,3 @@
-import json
-
 def gerar_prompt(data):
     turmas_list = data.get("turmas", [])
     regras_optativas = list(data.get("regras", []))
@@ -99,10 +97,3 @@ def gerar_prompt(data):
     """)
 
     return "\n".join(prompt)
-
-josn_test = """
-
-    {"turmas":[{"dias_de_aula":["Seg","Ter","Qua","Qui","Sex"],"disciplinas":[{"aulas_por_semana":5,"nome":"Ciencia","professor":{"disponibilidade":["Seg","Ter","Qua","Qui","Sex"],"exigencias":["Nenhuma"],"nome":"Kaique"}},{"aulas_por_semana":5,"nome":"Portugues","professor":{"disponibilidade":["Seg","Ter","Qua","Qui","Sex"],"exigencias":["Nenhuma"],"nome":"Isaac"}},{"aulas_por_semana":5,"nome":"Redação","professor":{"disponibilidade":["Seg","Ter","Qua","Qui","Sex"],"exigencias":["Nenhuma"],"nome":"Hiraku"}},{"aulas_por_semana":5,"nome":"Matematica","professor":{"disponibilidade":["Seg","Ter","Qua","Qui","Sex"],"exigencias":["Nenhuma"],"nome":"Rhubi"}},{"aulas_por_semana":5,"nome":"Geografia","professor":{"disponibilidade":["Seg","Ter","Qua","Qui","Sex"],"exigencias":["Nenhuma"],"nome":"Luiz"}}],"horarios":["08:00","09:00","10:00","11:00"],"nome":"A1","turno":"Manhã"}],"regras":[]}
-"""
-
-print(gerar_prompt(json.loads(josn_test)))
