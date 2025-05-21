@@ -95,4 +95,6 @@ def gerar_prompt(data):
         }
     """)
 
+    print(prompt)
+
     return "\n".join(prompt)
