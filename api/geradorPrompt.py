@@ -50,11 +50,11 @@ def gerar_prompt(data):
     prompt.extend([
         "- Cada turma deve ter aulas em todos os horarios disponiveis",
         "- O mesmo professor não pode estar em mais de uma turma no mesmo horário.",
-        "- Respeite a disponibilidade de cada professor.",
+        "- Respeite a disponibilidade de cada professor, eles so podem ser alocados em dias disponiveis.",
         "- Atenda às exigências dos professores sempre que possível.",
-        "- Se não for possível cumprir alguma exigência, indique o erro e explique a causa."
-        "- Não é necessario que o professor trabalhe todos os dias que estão disponiveis."
-        "- !!! O professor não pode trabalhar todos os dias."
+        "- Se não for possível cumprir alguma exigência, indique o erro e explique a causa.",
+        "- Não é necessario que o professor trabalhe todos os dias que estão disponiveis.",
+        "- !!! O professor não pode trabalhar todos os dias.",
     ])
 
     # REGRAS OPTATIVAS
