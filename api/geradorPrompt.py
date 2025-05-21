@@ -54,7 +54,8 @@ def gerar_prompt(data):
         "- Respeite a disponibilidade de cada professor.",
         "- Atenda às exigências dos professores sempre que possível.",
         "- Se não for possível cumprir alguma exigência, indique o erro e explique a causa."
-        "- Não é necessario que o professor trabalhe todos os dias que estão disponiveis"
+        "- Não é necessario que o professor trabalhe todos os dias que estão disponiveis."
+        "- O professor não pode trabalhar todos os dias da semana."
     ])
 
     # REGRAS OPTATIVAS
