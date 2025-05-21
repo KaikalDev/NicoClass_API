@@ -49,7 +49,7 @@ def gerar_prompt(data):
     prompt.append("\n📌 Regras obrigatórias:")
     prompt.extend([
         "- Cada turma deve ter aulas em todos os horarios disponiveis",
-        "- As aulas devem estar bem distribuídas, respeitando as exigencias dos professores",
+        "- As aulas devem estar bem distribuídas e para aulas com muitas ocorrencias na semana adicione aulas duplas(horaios seguidos)",
         "- O mesmo professor não pode estar em mais de uma turma no mesmo horário.",
         "- Respeite a disponibilidade de cada professor.",
         "- Atenda às exigências dos professores sempre que possível.",
@@ -65,8 +65,6 @@ def gerar_prompt(data):
     # OBJETIVO
     prompt.append("\n🎯 Objetivo:")
     prompt.append("Gerar uma tabela com os horários de cada disciplina para cada turma, atribuindo o professor certo, em horários permitidos.")
-    prompt.append("Se houver inconsistências ou impossibilidades, explique claramente o problema e especifique onde foi o problema (Turma, dia e horário), separando em erros.")
-    prompt.append("Se alguma regra optativa ou exigência forem descumpridas, explique claramente o problema e especifique onde foi o problema (Turma, dia e horário), separando em avisos.")
     prompt.append("Se houver inconsistências ou impossibilidades, explique claramente o problema e especifique onde foi o problema (Turma, dia e horário), separando em erros.")
     prompt.append("Se alguma regra optativa ou exigência forem descumpridas, explique claramente o problema e especifique onde foi o problema (Turma, dia e horário), separando em avisos.")
     # FORMATO DE RESPOSTA
