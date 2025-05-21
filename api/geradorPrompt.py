@@ -48,8 +48,8 @@ def gerar_prompt(data):
     # REGRAS FIXAS
     prompt.append("\n📌 Regras obrigatórias:")
     prompt.extend([
-        "- Cada turma deve ter exatamente 5 aulas por dia, nos dias definidos.",
-        "- As aulas devem estar distribuídas ao longo da semana.",
+        "- Cada turma deve ter aulas em todos os horarios disponiveis",
+        "- As aulas devem estar bem distribuídas, respeitando as exigencias dos professores",
         "- O mesmo professor não pode estar em mais de uma turma no mesmo horário.",
         "- Respeite a disponibilidade de cada professor.",
         "- Atenda às exigências dos professores sempre que possível.",
