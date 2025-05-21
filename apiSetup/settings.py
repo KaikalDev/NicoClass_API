@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-&aoic#6j@qmka&vg$+9jh%kz1bw&sl+j^3!hahidk!b-(&ulbc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["nicoclassapi-production.up.railway.app", '127.0.0.1'] 
+ALLOWED_HOSTS = ["nicoclassapi-production.up.railway.app", '127.0.0.1', 'nico-class-front.vercel.app'] 
 
 
 # Application definition
@@ -67,7 +67,8 @@ WSGI_APPLICATION = 'apiSetup.wsgi.application'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://nicoclassapi-production.up.railway.app" #front Deploy
+    "https://nicoclassapi-production.up.railway.app",
+    "http://nico-class-front.vercel.app/"
 ]
 
 CORS_ALLOW_CREDENTIALS = True
